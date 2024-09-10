@@ -3,11 +3,11 @@
     tasks:
     - name: TASK-01 from PLAY-01
       debug:
-        msg:"Message from TASK-01 from PLAY-01"
+        msg: "Message from TASK-01 from PLAY-01"
   
   - name: PLAY-02
     hosts: web
     tasks:
     - name: TASK-01 from PLAY-02
       debug:
-        msg:"Message from TASK-01 from PLAY-02"
+        msg: "Message from TASK-01 from PLAY-02"
