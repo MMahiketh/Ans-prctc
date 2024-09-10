@@ -5,8 +5,9 @@
   vars_files:
     vars.yml
   vars_prompt:
-    - Name: NAME
-      prompt: Var form prompt
+  - Name: NAME
+    prompt: Var form prompt
+    private: false
   tasks:
     - name: Print var from diff palces
       vars:
