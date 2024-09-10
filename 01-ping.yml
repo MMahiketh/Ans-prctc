@@ -1,0 +1,6 @@
+- name: Ping the node
+  hosts: web
+  tasks:
+  - name: Using ping module
+    ping:
+
