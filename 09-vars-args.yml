@@ -1,0 +1,6 @@
+- name: Variable form command line/arguments
+  hosts: web
+  tasks:
+  - name: Print vars form command line
+    debug:
+      msg: Hi, Good {{GREET}}. My age is {{AGE}}.
