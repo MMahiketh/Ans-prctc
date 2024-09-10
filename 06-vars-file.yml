@@ -1,4 +1,4 @@
-- name: Variables to print
+- name: Variables from files 
   hosts: web
   vars_files:
   - vars.yml
