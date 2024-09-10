@@ -1,0 +1,12 @@
+- name: Variables form prompt
+  hosts: web
+  vars_prompt:
+  - name: NAME 
+    prompt: Please enter your name
+    private: false
+  - name: TOOL
+    prompt: Please enter took your are learning
+  tasks:
+  - name: Print the info
+    debug:
+      msg: Hi, my name is {{NAME}}. I am learning {{TOOL}}
