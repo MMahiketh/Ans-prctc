@@ -5,7 +5,7 @@
   vars_files:
     vars.yml
   vars_prompt:
-  - Name: NAME
+  - name: NAME
     prompt: Var form prompt
     private: false
   tasks:
