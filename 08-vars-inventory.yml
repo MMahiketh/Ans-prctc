@@ -1,0 +1,6 @@
+- name: Variables form inventory file
+  hosts: web
+  tasks:
+  - name: Print the info
+    debug:
+      msg: Hi, my name is {{NAME}}. I am learning {{TOOL}}
