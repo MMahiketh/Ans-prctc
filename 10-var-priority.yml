@@ -10,9 +10,11 @@
     private: false
   tasks:
     - name: Print var from diff palces
-      vars:
-        NAME: Mahi form Task level
+      #vars:
+      #  NAME: Mahi form Task level
       debug:
         msg: Hi, I am {{NAME}}.
 
 
+#1. Args
+#2. Task level
