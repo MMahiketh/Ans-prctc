@@ -1,0 +1,19 @@
+- name: Variables to print
+  hosts: web
+  vars:
+    NAME: Mahiketh
+    TOOL: Ansible
+  tasks:
+  - name: print the information
+    debug:
+      msg: "Hi, my name is {{NAME}}. I am learning {{TOOL}}"
+  
+  - name: print the information
+    vars:
+      NAME: Mahi
+    debug:
+      msg: "Hi, my name is {{NAME}}. I am learning {{TOOL}}"
+  
+  - name: print the information
+    debug:
+      msg: "Hi, my name is {{NAME}}. I am learning {{TOOL}}"
