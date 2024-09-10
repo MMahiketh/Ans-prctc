@@ -4,10 +4,10 @@
     NAME: Mahi from Play level
       #vars_files:
       #vars.yml
-  vars_prompt:
-  - name: NAME
-    prompt: Var form prompt
-    private: false
+      #vars_prompt:
+      #- name: NAME
+      #  prompt: Var form prompt
+      #  private: false
   tasks:
     - name: Print var from diff palces
       #vars:
@@ -19,3 +19,4 @@
 #1. Args
 #2. Task level
 #3. File
+#4. Prompt
