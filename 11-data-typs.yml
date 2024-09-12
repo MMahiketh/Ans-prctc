@@ -1,0 +1,23 @@
+- name: Data Types in ansible
+  hosts: local
+  vars:
+    Num: 120
+    String: "This is a string"
+    var_list:
+    - item1
+    - item2
+    - item3
+    - Key: value
+    var_map:
+      Key1: value1
+      Key2: value2
+      Key3:
+      - va
+      - lu
+      - e3
+      Key4: true
+   
+  tasks:
+    - name: print all vars
+      ansible.builtin.debug:
+        msg: num={{Num}}, Str={{String}}, List={{var_list}}, Map={{var_map}}
