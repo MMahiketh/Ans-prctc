@@ -1,5 +1,5 @@
-- name: Condition in ansible
-  host: local
+- name: Conditions in ansible
+  hosts: local
   connection: lcoal
   vars:
     AGE: 12
