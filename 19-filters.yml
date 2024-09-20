@@ -8,4 +8,4 @@
 
   - name: Using upper and lower filters
     ansible.builtin.debug:
-      msg: "{{ 'My name is Mahiketh' | upper}}"
+      msg: "Upper case: {{ 'My name is Mahiketh' | upper}} \n Lower case: {{'My name is Mahiketh' | lower}}"
