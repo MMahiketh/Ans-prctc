@@ -1,6 +1,5 @@
 - name: Data Types in ansible
   hosts: local
-  connection: local
   vars:
     Num: 120
     String: "This is a string"
