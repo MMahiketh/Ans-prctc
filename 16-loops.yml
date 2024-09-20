@@ -11,5 +11,5 @@
   tasks:
   - name: print info using loops
     ansible.builtin.debug:
-      msg: "Hello {{item}}"
-    loop: "{{NAMES}}"
+      msg: "Hello {{NAMES}}"
+        #    loop: "{{NAMES}}"
