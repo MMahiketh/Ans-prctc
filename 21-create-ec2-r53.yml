@@ -69,6 +69,6 @@
       instance_ids: "{{item.instance_ids}}"
       security_groups:
       - "{{SG_ALLOW_MY_IP}}"
-      - "{{SG_ALLOW_PRI_IP"
+      - "{{SG_ALLOW_PRI_IP}}"
     loop: "{{ec2_out.results}}"
     when: item.item == "frontend"
