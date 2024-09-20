@@ -5,3 +5,7 @@
   - name: default value while using variable
     ansible.builtin.debug:
       msg: "My name is {{NAME | default('mahi')}}"
+
+  - name: Using upper and lower filters
+    ansible.builtin.debug:
+      msg: "My name is Mahiketh" | upper
