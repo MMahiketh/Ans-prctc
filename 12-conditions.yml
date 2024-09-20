@@ -1,6 +1,5 @@
 - name: Conditions in ansible
   hosts: local
-  connection: lcoal
   vars:
     AGE: 12
   tasks:
