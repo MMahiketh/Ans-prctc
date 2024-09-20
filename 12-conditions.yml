@@ -3,7 +3,7 @@
   connection: lcoal
   vars:
     AGE: 12
-  task:
+  tasks:
   - name: Check if age is below 18 years
     ansible.builtin.debug:
       msg: You are not allow to drink. You are minor.
