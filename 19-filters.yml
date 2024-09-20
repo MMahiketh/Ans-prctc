@@ -26,15 +26,15 @@
       - 45
       - 1
     ansible.builtin.debug:
-      msg: "Min: ((NUM | min }}, Max: {{NUM | max}} and Unique: {{NUM | unique}} "
+      msg: "Min: {{NUM | min}}, Max: {{NUM | max}} and Unique: {{NUM | unique}} "
 
   - name: convert list to dict
     vars:
       var_list:
-      - v
-      - a
-      - l
-      - u
-      - e
+      - Key: 1, Value: v
+      - Key: 2, Value: a
+      - Key: 3, Value: l
+      - Key: 4, Value: u
+      - Key: 5, Value: e
     ansible.builtin.debug:
       msg: "{{var_list | items2dict}}"
