@@ -3,7 +3,7 @@
   connection: local
   vars_prompt:
     -name: AGE
-    prompt: Please enter your age: 
+    prompt: "Please enter your age: "
     private: false
   tasks:
   - name: Check if age is below 18 years
