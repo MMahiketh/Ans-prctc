@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_prompt:
-    -name: AGE
+  - name: AGE
     prompt: "Please enter your age: "
     private: false
   tasks:
