@@ -17,4 +17,4 @@
 
   - name: Create user if not exist
     ansible.builtin.command: useradd {{USER}}
-    when: 1 == 0
+    when: USER_ID.rc != 0
