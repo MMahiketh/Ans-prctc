@@ -32,4 +32,4 @@
       security_group: "{{SG_ALLOW_PRI_IP}}"
       image_id: "{{AMI_ID_REDHAT}}"
     loop: "{{INSTANCES}}"
-    regitster: ec2_out
+    register: ec2_out
