@@ -28,7 +28,7 @@
     ansible.builtin.debug:
       msg: "Min: {{NUM | min}}, Max: {{NUM | max}} and Unique: {{NUM | unique}} "
 
-  - name: convert list to dict
+  - name: Convert list to dict
     vars:
       var_list:
       - {key: 1, value: v}
@@ -38,3 +38,9 @@
       - {key: 5, value: e}
     ansible.builtin.debug:
       msg: "{{var_list | items2dict}}"
+
+  - name: Validate ipv4
+    vars:
+      IP_add: 192.168.0.1
+    ansible.builtin.debug:
+      msg: "Validate IP: {{IP_add | ansible.utils.ipv4}}"
