@@ -9,3 +9,21 @@
   - name: Using upper and lower filters
     ansible.builtin.debug:
       msg: "Upper case: {{ 'My name is Mahiketh' | upper}} \n Lower case: {{'My name is Mahiketh' | lower}}"
+
+  - name: Min, Max and uniqu of list of numbers
+    vars:
+      NUM:
+      - 1
+      - 3
+      - 5
+      - 1
+      - 2
+      - 2
+      - 1
+      - 0
+      - 90
+      - 34
+      - 45
+      - 1
+    ansible.builtin.debug:
+      msg: "Min: ((NUM | min}}, Max: {{NUM | max}} and Uniqu: {{ NUM | uniqu}} "
