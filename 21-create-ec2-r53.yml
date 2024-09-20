@@ -14,7 +14,7 @@
     - database
     - backend
     - frontend
-  zone: mahdo.site
+    zone: mahdo.site
   tasks:
   - name: Create ec2 instances
     amazon.aws.ec2_instance:
