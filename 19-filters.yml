@@ -41,6 +41,6 @@
 
   - name: Validate ipv4
     vars:
-      IP_add: 192.168.0.1
+      IP_add: 192.168.0.355
     ansible.builtin.debug:
       msg: "Validate IP: {{IP_add | ansible.utils.ipv4}}"
