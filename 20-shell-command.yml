@@ -1,0 +1,22 @@
+- name: power of shell and limitations of command
+  hosts: local
+  connection: local
+  tasks:
+  - name: exec the command
+    ansible.builtin.command: ls -ltra > /tmp/outpu.txt
+
+  - name: Piping in command
+    ansible.builtin.command: ps -ef | grep ssh
+    register: output_c
+
+  - name: print output
+    ansible.builtin.debug:
+      msg: "{{ output_c }}"
+
+  - name: Piping in shell
+    ansible.builtin.shell: ps -ef | grep ssh
+    register: output_s
+
+  - name: print output
+    ansible.builtin.debug:
+      msg: "{{ output_s }}"
