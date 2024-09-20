@@ -8,11 +8,7 @@
       name: "{{item[0]}}"
       state: "{{item[1]}}"
     loop:
-    - - nginx
-      - present
-    - - postfix
-      - absent
-    - - tree
-      - present
-    - - htop
-      - present
+    - [nginx, present]
+    - [postfix, absent]
+    - [tree, present]
+    - [htop, present]
