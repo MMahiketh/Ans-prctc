@@ -15,7 +15,8 @@
       - va
       - lu
       - e3
-      Key4: true
+      - Key4: value4
+      Key5: true
    
   tasks:
     - name: print all vars
