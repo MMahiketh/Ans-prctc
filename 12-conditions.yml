@@ -1,8 +1,10 @@
 - name: Conditions in ansible
   hosts: local
   connection: local
-  vars:
-    AGE: 12
+  vars_prompt:
+    -name: AGE
+    prompt: Please enter your age: 
+    private: false
   tasks:
   - name: Check if age is below 18 years
     ansible.builtin.debug:
