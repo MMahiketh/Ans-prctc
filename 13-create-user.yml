@@ -13,7 +13,7 @@
 
   - name: Print data in USER_ID
     ansible.builtin.debug:
-      msg: {{USER_ID}}
+      msg: USER_ID
 
   - name: Create user if not exist
     ansible.builtin.command: useradd {{USER}}
