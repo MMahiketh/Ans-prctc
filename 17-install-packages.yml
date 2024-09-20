@@ -1,5 +1,5 @@
 - name: Install multiple packages using loops
-  hsots: local
+  hosts: local
   connection: local
   become: true
   tasks:
