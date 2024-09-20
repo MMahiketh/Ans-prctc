@@ -31,10 +31,10 @@
   - name: convert list to dict
     vars:
       var_list:
-      - {Key: 1, Value: v}
-      - {Key: 2, Value: a}
-      - {Key: 3, Value: l}
-      - {Key: 4, Value: u}
-      - {Key: 5, Value: e}
+      - {key: 1, value: v}
+      - {key: 2, value: a}
+      - {key: 3, value: l}
+      - {key: 4, value: u}
+      - {key: 5, value: e}
     ansible.builtin.debug:
       msg: "{{var_list | items2dict}}"
