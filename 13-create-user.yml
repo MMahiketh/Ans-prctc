@@ -1,5 +1,6 @@
 - name: Create user if not exist
   hosts: local
+  become: true
   connection: local
   vars_prompt:
   - name: USER
