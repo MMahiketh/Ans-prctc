@@ -16,6 +16,12 @@
     - frontend
     zone: mahdo.site
   tasks:
+  - name: Install aws dependencies (botocore & boto3) using ansible
+    ansible.builtin.pip:
+      name:
+        - botocore
+        - boto3
+
   - name: Create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{item}}"
