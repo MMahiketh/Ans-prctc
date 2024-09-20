@@ -8,6 +8,7 @@
   - name: Piping in command
     ansible.builtin.command: ps -ef | grep ssh
     register: output_c
+    ignore_errors: true
 
   - name: print output
     ansible.builtin.debug:
