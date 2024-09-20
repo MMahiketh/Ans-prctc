@@ -50,3 +50,25 @@
       overwrite: true
       state: present
     loop: "{{ec2_out.results}}"
+
+  - name: Create or update route 53 of frontend public ip
+    amazon.aws.route53:
+      zone: "{{zone}}"
+      record: "{{zone}}"
+      type: A
+      ttl: 300
+      value: "{{item.instances[0].public_ip_address}}"
+      wait: true
+      overwrite: true
+      state: present
+    loop: "{{ec2_out.results}}"
+    when: item.item == "frontend"
+
+  - name: Add SG to frontend to view website
+    amazon.aws.ec2_instance:
+      instance_ids: "{{item.instance_ids}}"
+      security_groups:
+      - "{{SG_ALLOW_MY_IP}}"
+      - "{{SG_ALLOW_PRI_IP"
+    loop: "{{ec2_out.results}}"
+    when: item.item == "frontend"
