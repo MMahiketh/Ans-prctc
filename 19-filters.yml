@@ -8,4 +8,4 @@
 
   - name: Using upper and lower filters
     ansible.builtin.debug:
-      msg: "My name is Mahiketh" | upper
+      msg: "{{ 'My name is Mahiketh' | upper}}"
