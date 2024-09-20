@@ -2,6 +2,7 @@
   hosts: local
   connection: local
   vars:
+    REGION: us-east-1
     AMI_ID_DEVOPS: ami-09c813fb71547fc4f
     AMI_ID_REDHAT: ami-0583d8c7a9c35822c
     INSTANCE_TYPE: t2.micro
@@ -25,9 +26,11 @@
   - name: Create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{item}}"
+      region: "{{REGION}}"
       key_name: "{{KEY_NAME}}"
       vpc_subnet_id: "{{SUBNET_ID}}"
       instance_type: "{{INSTANCE_TYPE}}"
       security_group: "{{SG_ALLOW_PRI_IP}}"
       image_id: "{{AMI_ID_REDHAT}}"
     loop: "{{INSTANCES}}"
+    regitster: ec2_out
