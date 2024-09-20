@@ -38,3 +38,15 @@
   - name: Read output of ec2_out
     ansible.builtin.debug:
       msg: "{{ec2_out}}"
+
+  - name: Create or update route 53 records of ec2's private ip
+    amazon.aws.route53:
+      zone: "{{zone}}"
+      record: "{{item.item}}.{{zone}}"
+      type: A
+      ttl: 300
+      value: "{{item.instances[0].private_ip_address}}"
+      wait: true
+      overwrite: true
+      state: present
+    loop: "{{ec2_out.results}}"
