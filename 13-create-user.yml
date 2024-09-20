@@ -9,7 +9,12 @@
   - name: Check if user is already present
     ansible.builtin.command: id {{USER}}
     register: USER_ID
+    ignore_errors: true
+
+  - name: Print data in USER_ID
+    ansible.builtin.debug:
+      msg: {{USER_ID}}
+
   - name: Create user if not exist
     ansible.builtin.command: useradd {{USER}}
     when: 1 == 0
-
