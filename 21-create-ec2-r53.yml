@@ -26,6 +26,7 @@
   - name: Create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{item}}"
+      region: "{{REGION}}"
       key_name: "{{KEY_NAME}}"
       vpc_subnet_id: "{{SUBNET_ID}}"
       instance_type: "{{INSTANCE_TYPE}}"
