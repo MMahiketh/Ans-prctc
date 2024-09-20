@@ -4,9 +4,9 @@
   become: true
   tasks:
   - name: Install packages
-    ansible.builtin.package: "{{item}}"
-    loop:
-    - name=nginx state=present
-    - name=postfix state=absent
-    - name=tree state=present
-    - name=htop state=present
+    ansible.builtin.package: name=nginx state=present
+      #    loop:
+      #    - name=nginx state=present
+      #    - name=postfix state=absent
+      #    - name=tree state=present
+      #    - name=htop state=present
