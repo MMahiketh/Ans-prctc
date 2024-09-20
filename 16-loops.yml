@@ -1,13 +1,15 @@
 - name: Loops in ansible
   hosts: local
   connection: local
-  tasks:
-  - name: print info using loops
-    ansible.builtin.debug:
-      msg: "Hello {{item}}"
-    loop:
+  vars:
+    NAMES
     - mahi
     - bob
     - alice
     - ram
     - veer
+  tasks:
+  - name: print info using loops
+    ansible.builtin.debug:
+      msg: "Hello {{item}}"
+    loop: NAMES
