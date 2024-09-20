@@ -1,0 +1,7 @@
+- name: Checking whats inside facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: Print fact variable
+    ansible.builtin.debug:
+      msg: "{{ansible_facts}}" #reserved variable
