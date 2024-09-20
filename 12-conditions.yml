@@ -1,0 +1,15 @@
+- name: Condition in ansible
+  host: local
+  connection: lcoal
+  vars:
+    AGE: 12
+  task:
+  - name: Check if age is below 18 years
+    ansible.builtin.debug:
+      msg: You are not allow to drink. You are minor.
+    when: AGE <= 18
+
+  - name: Check if age is above 18 years
+    ansible.builtin.debug:
+      msg: Here is your drink! Please enjoy.
+    when: AGE > 18
