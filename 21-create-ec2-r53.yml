@@ -34,3 +34,7 @@
       image_id: "{{AMI_ID_REDHAT}}"
     loop: "{{INSTANCES}}"
     register: ec2_out
+
+  - name: Read output of ec2_out
+    ansible.builtin.debug:
+      msg: "{{ec2_out}}"
