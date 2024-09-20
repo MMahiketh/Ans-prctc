@@ -3,15 +3,15 @@
   connection: local
   vars_prompt:
   - name: AGE
-    prompt: "Please enter your age: "
+    prompt: Please enter your age
     private: false
   tasks:
   - name: Check if age is below 18 years
     ansible.builtin.debug:
       msg: You are not allow to drink. You are minor.
-    when: AGE <= 18
+    when: AGE | int <= 18
 
   - name: Check if age is above 18 years
     ansible.builtin.debug:
       msg: Here is your drink! Please enjoy.
-    when: AGE > 18
+    when: AGE | int > 18
