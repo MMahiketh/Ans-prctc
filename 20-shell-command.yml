@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: exec the command
-    ansible.builtin.command: ls -ltra > /tmp/outpu.txt
+    ansible.builtin.shell: ls -ltra > /tmp/outpu.txt
 
   - name: Piping in command
     ansible.builtin.command: ps -ef | grep ssh
