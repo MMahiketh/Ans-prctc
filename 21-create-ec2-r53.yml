@@ -1,0 +1,27 @@
+- name: Create ec2 instances and route 53 records
+  hosts: local
+  connection: local
+  vars:
+    AMI_ID_DEVOPS: ami-09c813fb71547fc4f
+    AMI_ID_REDHAT: ami-0583d8c7a9c35822c
+    INSTANCE_TYPE: t2.micro
+    KEY_NAME: ans-key
+    VPC_ID_DEF: vpc-004eaa275ecef58a0
+    SG_ALLOW_MY_IP: sg-0674a0960a1751cd3
+    SG_ALLOW_PRI_IP: sg-0df6058723e0ea39a
+    SUBNET_ID: subnet-0d7b4d5d830114b0f
+    INSTANCES:
+    - database
+    - backend
+    - frontend
+  zone: mahdo.site
+  tasks:
+  - name: Create ec2 instances
+    amazon.aws.ec2_instance:
+      name: "{{item}}"
+      key_name: "{{KEY_NAME}}"
+      vpc_subnet_id: "{{SUBNET_ID}}"
+      instance_type: "{{INSTANCE_TYPE}}"
+      security_group: "{{SG_ALLOW_PRI_IP}}"
+      image_id: "{{AMI_ID_REDHAT}}"
+    loop: "{{INSTANCES}}"
