@@ -1,0 +1,7 @@
+- name: Functions/Filters in ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: default value while using variable
+    ansible.builtin.debug:
+      msg: "My name is {{NAME | default('mahi')}}"
