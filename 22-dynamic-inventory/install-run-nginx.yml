@@ -1,7 +1,7 @@
 - name: Install and Run nginx
   hosts: all
   become: yes
-  serial: 3
+  serial: 5
   tasks:
   - name: installing nginx
     ansible.builtin.dnf:
