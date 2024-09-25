@@ -3,7 +3,7 @@ region: us-east-1
 filter:
   tag:Name: backend
   instance-state-name: running
-hostmanes:
+hostnames:
 - private-ip-address
 compose:
   ansible_host: private_ip_address
