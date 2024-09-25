@@ -1,0 +1,12 @@
+- name: Install and Run nginx
+  become: yes
+  tasks:
+  - name: installing nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+
+  - name: Running nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
